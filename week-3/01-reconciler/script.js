@@ -51,16 +51,31 @@ function createDomElements(data) {
   });
 }
 
-//
-// window.setInterval(() => {
-//   let todos = [];
-//   for (let i = 0; i<Math.floor(Math.random() * 100); i++) {
-//     todos.push({
-//       title: "Go to gym",
-//       description: "Go to gym form 5",
-//       id: i+1
-//     })
-//   }
-//
-//   createDomElements(todos)
-// }, 1000)
+
+
+
+window.setInterval(() => {
+  console.log("Function called");
+  
+  let todos = [{
+    id: 1,
+    title: 'gym',
+    description: 'I get to go to gyms'
+  },
+  {
+    id: 2,
+    title: 'gym2',
+    description: 'I get to go to gymsaA'
+  }];
+
+  /* createDomElements(todos);
+  for (let i = 0; i < Math.floor(Math.random() * 100); i++) {
+    todos.push({
+      title: "Go to gym",
+      description: "Go to gym form 5",
+      id: i+1
+    });
+  } */
+
+  createDomElements(todos);
+}, 1000);

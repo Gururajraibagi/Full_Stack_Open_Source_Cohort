@@ -1,0 +1,41 @@
+<html>
+    <head>
+      
+    </head>
+    <body>
+        <div id="main">
+            gururaj
+        </div>
+        <button onclick=(clearInt())> click to stop</button>
+        <script>
+            let todos = [{
+                    id:1,
+                    desc : "I get to go to gym today"                
+                    },
+                    {
+                        
+                    id:2,
+                    desc : "I get to walk today"
+                    }
+            ]
+            var main = document.getElementById("main");
+            let counter=0;
+            let id=window.setInterval( () =>{
+                var myDiv=document.createElement("div");
+                var  label = document.createElement("label");
+                label.innerHTML = counter++;
+                myDiv.appendChild(label)
+                console.log(label);
+                console.log("content", main);
+                main.appendChild(label)
+               
+            },1000)
+            let clearInt = () =>{
+                console.log(id)
+                window.clearInterval(id)
+            }
+           
+
+        </script>
+    </body>
+</html>
